@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Salão de Festas</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap JS, optional -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h1>Cadastro de Salão de Festas</h1>
+  <form action="processar_formulario.php" method="post">
+    <div class="form-group">
+      <label for="nomeSalao">Nome do Salão:</label>
+      <input type="text" class="form-control" id="nomeSalao" name="nomeSalao" required>
+    </div>
+    <div class="form-group">
+      <label for="numeroSalao">Número do Salão:</label>
+      <input type="text" class="form-control" id="numeroSalao" name="numeroSalao" required>
+    </div>
+    <div class="form-group">
+      <label for="localizacaoSalao">Localização do Salão:</label>
+      <input type="text" class="form-control" id="localizacaoSalao" name="localizacaoSalao" required>
+    </div>
+    <div class="form-group">
+      <label>Tipos de Decorações Desejadas:</label>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="buffet" name="decoracoes[]" value="Buffet">
+        <label class="form-check-label" for="buffet">Buffet</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="cadeira" name="decoracoes[]" value="Cadeira">
+        <label class="form-check-label" for="cadeira">Cadeira</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="mesa" name="decoracoes[]" value="Mesa">
+        <label class="form-check-label" for="mesa">Mesa</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="musica" name="decoracoes[]" value="Música">
+        <label class="form-check-label" for="musica">Música</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="apresentacoes" name="decoracoes[]" value="Apresentações">
+        <label class="form-check-label" for="apresentacoes">Apresentações</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="jogos" name="decoracoes[]" value="Jogos">
+        <label class="form-check-label" for="jogos">Jogos</label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+
+</body>
+</html>

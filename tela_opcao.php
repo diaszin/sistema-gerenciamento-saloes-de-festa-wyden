@@ -9,6 +9,13 @@
 </head>
 
 <body>
+  <?php
+    // Verifica se o usuário foi logado
+    if($_COOKIE["isLogged"] == false){
+      header("location: index.php");
+      die();
+    }
+  ?>
   <div class="row">
     <?php
     include "./Espacos.php";

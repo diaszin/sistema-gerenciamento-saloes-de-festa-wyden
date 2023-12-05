@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Se as credenciais são válidas, redirecione ou exiba uma mensagem de sucesso
     if ($credenciais_validas) {
+        setcookie("isLogged", true);
         header("location: tela_opcao.php");
         exit();
     } else {

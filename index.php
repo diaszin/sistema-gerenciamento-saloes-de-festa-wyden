@@ -13,13 +13,13 @@
 <div class="container">
 <div id="form_login">
     <h1>Login</h1>
-    <form action="/action_page.php">
+    <form action="./tela_login.php">
         <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" class="form-control" placeholder="Digite o Email" id="email">
         </div>
         <div class="form-group">
-          <label for="pwd">Senha:</label>
+          <label for="senha">Senha:</label>
           <input type="password" class="form-control" placeholder="Digite a senha" id="senha">
         </div>
         <div class="form-group form-check">

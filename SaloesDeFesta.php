@@ -3,7 +3,7 @@
 include "./db.php";
 
 class SaloesDeFesta{
-    private static $conexao;
+    private  $conexao;
     function __construct()
     {
         global $dsn;

@@ -10,13 +10,13 @@ class Espaco{
         $this->conexao = $dsn;
     }
     function getAll(){
-        $sql = "SELECT id, nome FROM espaco";
+        $sql = "SELECT id, nome FROM localizacao";
         $resultado = $this->conexao->query($sql);
 
         return $resultado->fetchAll();
     }
     function getById(int $id){
-        $sql = "SELECT id, nome FROM espaco WHERE id = ?";
+        $sql = "SELECT id, nome FROM localizacao WHERE id = ?";
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute([$id]);
 
@@ -24,14 +24,14 @@ class Espaco{
     }
 
     function create(string $nome){
-        $sql = "INSERT INTO espaco (nome) VALUES (?)";
+        $sql = "INSERT INTO localizacao (nome) VALUES (?)";
         $stmt = $this->conexao->prepare($sql);
         // Retorna verdadeiro se foi cadastrado com sucesso
         return $stmt->execute([$nome]);
     }
 
     function delete(int $id){
-        $sql = "DELETE FROM espaco WHERE id=?";
+        $sql = "DELETE FROM localizacao WHERE id=?";
         $stmt = $this->conexao->prepare($sql);
         return $stmt->execute([$id]);
     }
@@ -55,7 +55,7 @@ class Espaco{
 
         }
         echo $values;
-        $sql = "UPDATE espaco SET ? WHERE id = ?";
+        $sql = "UPDATE localizacao SET ? WHERE id = ?";
         $stmt = $this->conexao->prepare($sql);
         // Retorna se foi alterado com sucesso ou não
         return $stmt->execute([$values, $id]);

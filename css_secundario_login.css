@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+#form_login{
+    height: 600px;
+    width: 600px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Login Salão de Festas</title>
@@ -9,28 +10,30 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-<div class="container">
-<div id="form_login">
-    <h1>Login</h1>
-    <form action="./tela_login.php">
+  <div class="container">
+    <div id="form_login">
+      <h1>Login</h1>
+      <form action="./login.php" method="post">
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" class="form-control" placeholder="Digite o Email" id="email">
+          <input type="email" class="form-control" placeholder="Digite o Email" id="email" name="email">
         </div>
         <div class="form-group">
           <label for="senha">Senha:</label>
-          <input type="password" class="form-control" placeholder="Digite a senha" id="senha">
+          <input type="password" class="form-control" placeholder="Digite a senha" name="senha" id="senha">
         </div>
         <button type="submit" class="btn btn-primary">ENTRAR</button>
       </form>
       <?php
-        // Exibe a mensagem de erro, se houver
-        if (isset($mensagem_erro)) {
-            echo '<p style="color: red;">' . $mensagem_erro . '</p>';
-        }
-        ?>
+      // Exibe a mensagem de erro, se houver
+      if (isset($mensagem_erro)) {
+        echo '<p style="color: red;">' . $mensagem_erro . '</p>';
+      }
+      ?>
     </div>
-</div>
+  </div>
 </body>
+
 </html>

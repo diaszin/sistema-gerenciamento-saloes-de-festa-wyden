@@ -16,10 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Se as credenciais são válidas, redirecione ou exiba uma mensagem de sucesso
     if ($credenciais_validas) {
-        header("Location: pagina_de_boas_vindas.php");
+        header("location: pagina_de_boas_vindas.php");
         exit();
     } else {
         $mensagem_erro = "Credenciais inválidas. Tente novamente.";
+        header("location: ./index.php");
     }
 }
 ?>

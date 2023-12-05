@@ -46,6 +46,21 @@
         ?>
 
       </div>
+      <div class="form-group">
+        <label>Observações</label>
+        <div class='form-check'>
+            <input class='form-check-input' type='radio'  name='status' value='manuntencao' id="manuntencao">
+            <label class='form-check-label' for="manuntencao">Em manuntencao</label>
+        </div>
+        <div class='form-check'>
+            <input class='form-check-input' type='radio'  name='status' value='alugado' id="alugado">
+            <label class='form-check-label' for="alugado" >Alugado</label>
+        </div>
+        <div class='form-check'>
+            <input class='form-check-input' type='radio'  name='status' value='livre' id="livre">
+            <label class='form-check-label' for="livre" >Livre</label>
+        </div>
+      </div>
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
   </div>

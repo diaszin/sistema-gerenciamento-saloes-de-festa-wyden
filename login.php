@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Se as credenciais são válidas, redirecione ou exiba uma mensagem de sucesso
     if ($credenciais_validas) {
-        header("location: tela_opcao.html");
+        header("location: tela_opcao.php");
         exit();
     } else {
         $mensagem_erro = "Credenciais inválidas. Tente novamente.";

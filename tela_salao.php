@@ -16,6 +16,13 @@
     <h1>Cadastro de Salão de Festas</h1>
     <form action="processar_formulario.php" method="post">
       <div class="form-group">
+        <?php
+        if (isset($_GET["localizacao"])) {
+          $localizacaoId = $_GET["localizacao"];
+          echo "<input type='hidden' name='localizacaoId' value='$localizacaoId'";
+        }
+
+        ?>
         <label for="nomeSalao">Nome do Salão:</label>
         <input type="text" class="form-control" id="nomeSalao" name="nomeSalao" required>
       </div>
@@ -49,16 +56,16 @@
       <div class="form-group">
         <label>Observações</label>
         <div class='form-check'>
-            <input class='form-check-input' type='radio'  name='status' value='manuntencao' id="manuntencao">
-            <label class='form-check-label' for="manuntencao">Em manuntencao</label>
+          <input class='form-check-input' type='radio' name='status' value='manuntencao' id="manuntencao">
+          <label class='form-check-label' for="manuntencao">Em manuntencao</label>
         </div>
         <div class='form-check'>
-            <input class='form-check-input' type='radio'  name='status' value='alugado' id="alugado">
-            <label class='form-check-label' for="alugado" >Alugado</label>
+          <input class='form-check-input' type='radio' name='status' value='alugado' id="alugado">
+          <label class='form-check-label' for="alugado">Alugado</label>
         </div>
         <div class='form-check'>
-            <input class='form-check-input' type='radio'  name='status' value='livre' id="livre">
-            <label class='form-check-label' for="livre" >Livre</label>
+          <input class='form-check-input' type='radio' name='status' value='livre' id="livre">
+          <label class='form-check-label' for="livre">Livre</label>
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Enviar</button>

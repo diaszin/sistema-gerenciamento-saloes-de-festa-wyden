@@ -22,11 +22,6 @@
           <label for="senha">Senha:</label>
           <input type="password" class="form-control" placeholder="Digite a senha" id="senha">
         </div>
-        <div class="form-group form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox"> Mantenha-me conectado
-          </label>
-        </div>
         <button type="submit" class="btn btn-primary">ENTRAR</button>
       </form>
       <?php

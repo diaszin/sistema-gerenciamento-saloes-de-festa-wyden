@@ -10,13 +10,13 @@ class SaloesDeFesta{
         $this->conexao = $dsn;
     }
     function getAll(){
-        $sql = "SELECT id, nome FROM saloes_de_festa";
+        $sql = "SELECT id, nome FROM salaoDeFestas";
         $resultado = $this->conexao->query($sql);
 
         return $resultado->fetchAll();
     }
     function getById(int $id){
-        $sql = "SELECT id, nome FROM saloes_de_festa WHERE id = ?";
+        $sql = "SELECT id, nome FROM salaoDeFestas WHERE id = ?";
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute([$id]);
 
@@ -24,14 +24,14 @@ class SaloesDeFesta{
     }
 
     function create(string $nome){
-        $sql = "INSERT INTO saloes_de_festa (nome) VALUES (?)";
+        $sql = "INSERT INTO salaoDeFestas (nome) VALUES (?)";
         $stmt = $this->conexao->prepare($sql);
         // Retorna verdadeiro se foi cadastrado com sucesso
         return $stmt->execute([$nome]);
     }
 
     function delete(int $id){
-        $sql = "DELETE FROM saloes_de_festa WHERE id=?";
+        $sql = "DELETE FROM salaoDeFestas WHERE id=?";
         $stmt = $this->conexao->prepare($sql);
         return $stmt->execute([$id]);
     }
@@ -55,7 +55,7 @@ class SaloesDeFesta{
 
         }
         echo $values;
-        $sql = "UPDATE saloes_de_festa SET ? WHERE id = ?";
+        $sql = "UPDATE salaoDeFestas SET ? WHERE id = ?";
         $stmt = $this->conexao->prepare($sql);
         // Retorna se foi alterado com sucesso ou não
         return $stmt->execute([$values, $id]);

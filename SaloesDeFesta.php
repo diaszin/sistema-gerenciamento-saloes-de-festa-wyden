@@ -23,11 +23,12 @@ class SaloesDeFesta{
         return $stmt->fetch();
     }
 
-    function create(string $nome){
-        $sql = "INSERT INTO salaoDeFestas (nome) VALUES (?)";
+    function create(string $nome, int $localizacao_id, bool $esta_em_manutencao = false, bool $esta_sendo_alugado = false){
+        $sql = "INSERT INTO salaoDeFestas (nome, localizacao_id, esta_em_manutencao, esta_sendo_alugado) VALUES (?, ?, ?, ?)";
         $stmt = $this->conexao->prepare($sql);
-        // Retorna verdadeiro se foi cadastrado com sucesso
-        return $stmt->execute([$nome]);
+        // Retorna id
+        $stmt->execute([$nome, $localizacao_id, $esta_em_manutencao, $esta_sendo_alugado]);
+        return $this->conexao->lastInsertId();
     }
 
     function delete(int $id){

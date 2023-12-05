@@ -14,7 +14,7 @@
 
   <div class="container mt-5">
     <h1>Cadastro de Salão de Festas</h1>
-    <form action="processar_formulario.php" method="post">
+    <form action="cadastro_salao.php" method="post">
       <div class="form-group">
         <?php
         if (isset($_GET["localizacao"])) {
@@ -29,10 +29,6 @@
       <div class="form-group">
         <label for="numeroSalao">Número do Salão:</label>
         <input type="text" class="form-control" id="numeroSalao" name="numeroSalao" required>
-      </div>
-      <div class="form-group">
-        <label for="localizacaoSalao">Localização do Salão:</label>
-        <input type="text" class="form-control" id="localizacaoSalao" name="localizacaoSalao" required>
       </div>
       <div class="form-group">
         <label>Tipos de Decorações Desejadas:</label>

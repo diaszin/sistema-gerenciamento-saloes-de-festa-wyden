@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<a class="btn btn-primary" href="cadastro_local.php" role="button">Cadastrar localização</a>
+<a class="btn btn-primary" href="criar_local.php" role="button">Cadastrar localização</a>
   <?php
     // Verifica se o usuário foi logado
     if($_COOKIE["isLogged"] == false){

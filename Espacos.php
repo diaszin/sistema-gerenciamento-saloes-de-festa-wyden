@@ -1,6 +1,5 @@
 <?php
-
-include "./db.php";
+require_once("./db.php");
 
 class Espaco{
     private $conexao;

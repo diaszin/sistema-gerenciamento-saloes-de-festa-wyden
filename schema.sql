@@ -45,3 +45,12 @@ CREATE TABLE account (
 
 -- Insere as decorações
 INSERT INTO decoracoes (nome) VALUES ("decoração"), ("buffet"), ("garçom"), ("cerimonial"), ("mesa e cadeira");
+
+ALTER TABLE ocupacao DROP FOREIGN KEY ocupacao_ibfk_1;
+
+ALTER TABLE ocupacao 
+  ADD CONSTRAINT ocupacao_ibfk_1
+  FOREIGN KEY (id_salao)
+  REFERENCES salaoDeFestas(id) 
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;

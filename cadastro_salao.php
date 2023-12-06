@@ -1,5 +1,5 @@
 <?php
-include "./SaloesDeFesta.php";
+require_once ("./SaloesDeFesta.php");
 include "./Decoracoes.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $salaoDeFestaId = $salaoDeFesta->create($nomeSalao, $localizacaoSalao, $manutencao, $alugado);
     $decoracao->create($salaoDeFestaId, $decoracoesSelecionadas);
-    header("location: ./crud_saloes_disponiveis.html");
+    header("location: ./crud_saloes_disponiveis.php?localizacao=".$localizacaoSalao);
   }
 }
 ?>

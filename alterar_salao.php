@@ -14,14 +14,15 @@
 
   <div class="container mt-5">
     <h1>Cadastro de Salão de Festas</h1>
-    <form action="cadastro_salao.php" method="post">
+    <form action="./update_salao.php" method="post">
       <div class="form-group">
         <?php
-        if (isset($_GET["localizacao"])) {
-          $localizacaoId = $_GET["localizacao"];
-          echo "<input type='hidden' name='localizacaoId' value='$localizacaoId'";
+        if (isset($_GET["id"]) && isset($_GET["localizacao"])) {
+          $id = $_GET["id"];
+          $localizacaoID = $_GET["localizacao"];
+          echo "<input type='hidden' name='id' value='$id'> 
+          <input type='hidden' name='localizacao' value='$localizacaoID'";
         }
-
         ?>
         <label for="nomeSalao">Nome do Salão:</label>
         <input type="text" class="form-control" id="nomeSalao" name="nomeSalao" required>

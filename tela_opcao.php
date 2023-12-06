@@ -27,7 +27,7 @@
           <div class='card'>
             <div class='card-body'>
               <h5 class='card-title'>$nome_localizacao</h5>
-              <a href='./crud_saloes_diponiveis.php?localizacao=$id_localizacao' class='btn btn-primary'>Visitar</a>
+              <a href='crud_saloes_disponiveis.php?localizacao=$id_localizacao' class='btn btn-primary'>Visitar</a>
             </div>
           </div>
         </div>";

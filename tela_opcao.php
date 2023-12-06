@@ -22,11 +22,12 @@
     $espaco = new Espaco();
     foreach ($espaco->getAll() as $localizacao) {
       $nome_localizacao = $localizacao["nome"];
+      $id_localizacao =  $localizacao["id"];
       echo "<div class='col-sm-6 mb-3'>
           <div class='card'>
             <div class='card-body'>
               <h5 class='card-title'>$nome_localizacao</h5>
-              <a href='#' class='btn btn-primary'>Visitar</a>
+              <a href='./crud_saloes_diponiveis.php?localizacao=$id_localizacao' class='btn btn-primary'>Visitar</a>
             </div>
           </div>
         </div>";

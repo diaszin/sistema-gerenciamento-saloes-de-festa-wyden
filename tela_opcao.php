@@ -10,6 +10,7 @@
 
 <body>
 <a class="btn btn-primary" href="criar_local.php" role="button">Cadastrar localização</a>
+
   <?php
     // Verifica se o usuário foi logado
     if($_COOKIE["isLogged"] == false){
@@ -29,6 +30,7 @@
             <div class='card-body'>
               <h5 class='card-title'>$nome_localizacao</h5>
               <a href='crud_saloes_disponiveis.php?localizacao=$id_localizacao' class='btn btn-primary'>Visitar</a>
+              <a href='deletar_localizacao.php?localizacao=$id_localizacao' class='btn btn-primary'>Deletar</a>
             </div>
           </div>
         </div>";
